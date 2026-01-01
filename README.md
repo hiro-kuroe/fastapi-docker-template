@@ -26,3 +26,9 @@ docker run -p 8000:8000 fastapi-app
 - RUN：build中に実行
 - CMD：起動コマンド
 - -p：PC ↔ コンテナの橋
+
+- ### Debug note (SQLite path)
+- SQLALCHEMY_DATABASE_URL を print して cwd と DB パスを確認した
+- 相対パスの場合、uvicorn の起動ディレクトリに依存する
+- 問題切り分け後は print は削除
+
